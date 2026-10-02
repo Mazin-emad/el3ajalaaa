@@ -32,8 +32,11 @@
         "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://${VERCEL_URL}",
+        "APP_KEY": "base64:XG8d2L/C2X4e1vB6mK+L1N9gO3P7rS8eK4qF8W5tY=",
         "CACHE_DRIVER": "array",
         "SESSION_DRIVER": "cookie",
-        "LOG_CHANNEL": "stderr"
+        "LOG_CHANNEL": "stderr",
+        "DB_CONNECTION": "sqlite",
+        "DB_DATABASE": "/tmp/database.sqlite"
     }
 }
