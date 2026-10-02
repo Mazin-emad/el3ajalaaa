@@ -1,0 +1,90 @@
+/* ============================================
+   Dar Alroaya Exam System — Global Styles
+   ============================================ */
+
+:root {
+    --font-ar: 'Noto Kufi Arabic', sans-serif;
+}
+
+*, body {
+    font-family: var(--font-ar) !important;
+}
+
+/* Smooth transitions */
+.transition-all { transition: all .3s ease; }
+
+/* Card hover lift */
+.card {
+    transition: box-shadow .2s ease;
+}
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0,0,0,.08) !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f3f5; }
+::-webkit-scrollbar-thumb { background: #adb5bd; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #6c757d; }
+
+/* Badge subtle variants (Bootstrap 5.3 polyfill) */
+.bg-success-subtle { background-color: #d1e7dd !important; }
+.bg-warning-subtle { background-color: #fff3cd !important; }
+.bg-danger-subtle  { background-color: #f8d7da !important; }
+.bg-primary-subtle { background-color: #cfe2ff !important; }
+.bg-secondary-subtle { background-color: #e2e3e5 !important; }
+
+/* Progress bar animation */
+.progress-bar { transition: width 0.8s ease; }
+
+/* Alert container flash */
+#alert-container .alert {
+    animation: slideDown .3s ease;
+}
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Exam page specific */
+.option-card {
+    cursor: pointer;
+    border: 2px solid #dee2e6;
+    border-radius: 12px;
+    transition: all .2s ease;
+    padding: 14px 16px;
+}
+.option-card:hover {
+    border-color: #0d6efd;
+    background: #f0f5ff;
+    transform: translateX(-3px);
+}
+.option-card.selected {
+    border-color: #0d6efd;
+    background: #e8f0fe;
+}
+
+/* Sidebar active glow */
+.sidebar .nav-link.active {
+    box-shadow: 0 2px 10px rgba(13,110,253,.3);
+}
+
+/* Table improvements */
+.table th {
+    font-weight: 600;
+    font-size: .875rem;
+    color: #495057;
+}
+
+/* Form label */
+.form-label {
+    color: #495057;
+    margin-bottom: .4rem;
+}
+
+/* Print styles */
+@media print {
+    .navbar, .footer, .no-print, .sidebar, .topbar { display: none !important; }
+    .card { break-inside: avoid; }
+    body { background: #fff !important; }
+}

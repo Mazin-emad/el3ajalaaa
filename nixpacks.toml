@@ -1,0 +1,10 @@
+# nixpacks.toml configuration for Laravel deployment on Railway
+
+[variables]
+    DOCUMENT_ROOT = "/public"
+
+[phases.build]
+cmds = [
+    "composer install --no-interaction --optimize-autoloader --no-dev",
+    "npm install && npm run build"
+]
